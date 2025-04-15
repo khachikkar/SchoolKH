@@ -189,7 +189,7 @@ import uiuxIcon from '../assets/uiux-icon.png';
 const courses = [
   {
     title: 'Introduction to AI tools',
-    description: '',
+    description: 'For Kids',
     price: '$299',
     image: aiToolsIcon,
     points: [
@@ -201,7 +201,7 @@ const courses = [
   },
   {
     title: 'UI/UX and Design',
-    description: '',
+    description: 'For Adults',
     price: '$199',
     image: uiuxIcon,
     points: [
@@ -211,7 +211,18 @@ const courses = [
       'Modern design trends'
     ],
   },
-];
+{
+    title: 'SEO',
+    description: 'For kids',
+    price: '$199',
+    image: uiuxIcon,
+    points: [
+      'Wireframing & prototyping',
+      'Figma & Adobe XD workflows',
+      'User journey mapping',
+      'Modern design trends'
+    ],
+  },];
 
 const Courses = () => {
   const [showForm, setShowForm] = React.useState(false);
