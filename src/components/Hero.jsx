@@ -11,11 +11,16 @@ const HeroSection = styled.section`
   gap: 3rem;
   min-height: 350px;
   flex-direction: row;
+  padding-top: 64px;
 
   @media (max-width: 900px) {
     flex-direction: column;
     gap: 2rem;
     padding: 3rem 1rem 2rem 1rem;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
+    margin-top: 90px;
   }
 `;
 
