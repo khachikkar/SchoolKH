@@ -8,6 +8,8 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  height: 64px;
+  min-height: 64px;
   position: fixed;
   top: 0;
   left: 0;
@@ -21,14 +23,25 @@ const Nav = styled.nav`
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     box-shadow: 0 2px 12px rgba(31,1,185,0.10);
+    height: 64px;
+    min-height: 64px;
   }
 `;
 
 const Logo = styled.div`
-  font-size: 1.7rem;
-  font-weight: bold;
-  color: ${({ theme }) => theme.colors.electricBlue};
-  text-align: left;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  img {
+    height: 42px;
+    width: 42px;
+    display: block;
+    background: transparent !important;
+    box-shadow: none;
+    border-radius: 0;
+    mix-blend-mode: multiply;
+    object-fit: contain;
+  }
 `;
 
 const NavLinks = styled.div`
@@ -79,6 +92,7 @@ const Link = styled.a`
 `;
 
 import RegistrationForm from './RegistrationForm';
+import logoImg from '../assets/logo.png';
 
 const RegisterButton = styled.button`
   background: ${({ theme }) => theme.colors.electricBlue || '#1F01B9'};
@@ -205,7 +219,7 @@ const Navbar = () => {
 
   return (
     <Nav style={{opacity: visible ? 1 : 0}}>
-      <Logo>Training Courses</Logo>
+      <Logo><img src={logoImg} alt="Logo" /></Logo>
       <RightGroup>
         <NavLinks>
           <Link href="#courses">Courses</Link>
