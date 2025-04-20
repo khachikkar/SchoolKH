@@ -74,51 +74,23 @@ const Step = styled(motion.div)`
   }
 `;
 
-
-
-import aiToolsIcon from '../assets/ai-tools-icon.png';
-import uiuxIcon from '../assets/uiux-icon.png';
-import heroImage from '../assets/hero-image.jpg';
-import teacher1Img from '../assets/teacher1.jpg';
-import teacher2Img from '../assets/teacher2.jpg';
-
-const cardData = [
-  {
-    image: aiToolsIcon,
-    text: 'Create your own simple website or app and show it to your friends and family!',
-  },
-  {
-    image: uiuxIcon,
-    text: 'Learn how to use cool tools like ChatGPT and Figma to make your ideas real.',
-  },
-  {
-    image: heroImage,
-    text: 'See how design and marketing work by making your own project and sharing it online.',
-  },
-  {
-    image: teacher1Img,
-    text: 'Work together with other teens, make new friends, and help each other succeed.',
-  },
-  {
-    image: teacher2Img,
-    text: 'Get support from real teachers and join a community where you can always ask for help.',
-  },
-];
+import { whatYouWillLearn } from '../data/importantInfo.mjs';
 
 const WhatYouWillLearn = () => (
   <LearnSection id="learn">
-    <h1 style={{ color: '#fff', fontWeight: 700, marginBottom: '1.8rem' }}>What You Will Learn</h1>
+    <h1>What You Will Learn</h1>
     <FlowContainer>
-      {cardData.map((card, idx) => (
+      {whatYouWillLearn.map((card, idx) => (
         <Step
           key={idx}
           initial={{ opacity: 0, x: idx % 2 === 0 ? -80 : 80 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7, type: 'spring', bounce: 0.28 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: idx * 0.1 }}
         >
-          <img src={card.image} alt="card visual" style={{ width: '100%', height: '100px', borderRadius: '1rem', marginBottom: '1rem', objectFit: 'cover', boxShadow: '0 2px 12px rgba(31,1,185,0.11)' }} />
-          <span style={{ fontSize: '1.08em', fontWeight: 600, lineHeight: 1.4 }}>{card.text}</span>
+          <img src={card.image} alt={card.title} style={{width:'64px',height:'64px',objectFit:'contain',marginBottom:'1.2em'}} />
+          <div style={{fontSize:'1.2em',fontWeight:600,marginBottom:'0.5em'}}>{card.title}</div>
+          <div>{card.description}</div>
         </Step>
       ))}
     </FlowContainer>
