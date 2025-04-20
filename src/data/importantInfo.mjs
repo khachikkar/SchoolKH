@@ -53,5 +53,9 @@ export const whatYouWillLearn = [
     image: learn3Img,
   },
 ];
-
+export const courses = [
+  { title: 'Introduction to AI tools' },
+  { title: 'UI/UX and Design' },
+  { title: 'SEO' }
+];
 // Add other important info as needed (socials, courses, etc)
