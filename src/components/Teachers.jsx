@@ -111,9 +111,10 @@ const Teachers = () => {
   const [hovered, setHovered] = useState(null);
   const [showForm, setShowForm] = useState(false);
 
+  // Set overlay color based on hovered teacher gender
   let overlay = null;
-  if (hovered === 'Anna Smith') overlay = 'pink';
-  if (hovered === 'David Lee') overlay = 'blue';
+  if (['Anna Smith', 'Vard Ohanyan'].includes(hovered)) overlay = 'pink'; // Female
+  if (['David Lee', 'Khachik Karapetyan'].includes(hovered)) overlay = 'blue'; // Male
 
   return (
     <TeachersSection id="teachers" $overlay={overlay}>

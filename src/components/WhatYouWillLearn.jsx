@@ -88,7 +88,7 @@ const WhatYouWillLearn = () => (
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: idx * 0.1 }}
         >
-          <img src={card.image} alt={card.title} style={{width:'64px',height:'64px',objectFit:'contain',marginBottom:'1.2em'}} />
+          <img src={card.image} alt={card.title} style={{width:'100%',height:'100px',objectFit:'cover',marginBottom:'1.2em'}} />
           <div style={{fontSize:'1.2em',fontWeight:600,marginBottom:'0.5em'}}>{card.title}</div>
           <div>{card.description}</div>
         </Step>

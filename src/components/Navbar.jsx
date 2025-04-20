@@ -222,12 +222,12 @@ const Navbar = () => {
       <Logo><img src={logoImg} alt="Logo" /></Logo>
       <RightGroup>
         <NavLinks>
-          <Link href="#courses">Courses</Link>
-          <Link href="#learn">What You'll Learn</Link>
-          <Link href="#teachers">Teachers</Link>
+          <Link href="#courses">Դասընթացներ</Link>
+          <Link href="#learn">Ինչ կսովորես</Link>
+          <Link href="#teachers">Դասընթացավարներ</Link>
         </NavLinks>
         <RegisterButton as="button" type="button" onClick={() => setShowForm(true)}>
-          Register
+          Գրանցվել
         </RegisterButton>
         <MenuIcon aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'} onClick={() => setMobileMenuOpen(v => !v)}>
           {mobileMenuOpen ? (
