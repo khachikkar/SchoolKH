@@ -8,16 +8,17 @@ import emailjs from 'emailjs-com';
 
 const Overlay = styled.div`
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.35);
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  width: 100vw;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  overflow-y: auto;
+  padding: 2vw 0;
   z-index: 1000;
 `;
 
@@ -27,9 +28,17 @@ const Modal = styled.div`
   border-radius: 1rem;
   padding: 2.2rem 2.2rem 1.7rem 2.2rem;
   width: 400px;
-  max-width: 96vw;
+  max-width: 98vw;
   box-shadow: 0 4px 24px rgba(0,0,0,0.18);
   position: relative;
+  max-height: 95vh;
+  overflow-y: auto;
+  @media (max-width: 600px) {
+    width: 98vw;
+    min-width: unset;
+    padding: 1.2rem 0.7rem 1.1rem 0.7rem;
+    max-height: 98vh;
+  }
 `;
 
 const CloseBtn = styled.button`
